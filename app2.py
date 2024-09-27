@@ -22,9 +22,10 @@ if option == 'youtube':
     yt_url = st.text_input("Enter a YouTube url", key='yt_url')
 if option == 'video/audio':
     file = st.file_uploader("Upload video or audio file", type=['mp4', 'mp3'], key='video/audio')
-    with open(file.name, "wb") as f:
-        f.write(file.getbuffer())
-    st.session_state['file_path'] = file.name
+    if file:
+        with open(file.name, "wb") as f:
+            f.write(file.getbuffer())
+        st.session_state['file_path'] = file.name
 
 if st.session_state.api_key:
     if st.button("submit"):
