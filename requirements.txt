@@ -12,3 +12,4 @@ google-auth-httplib2
 nltk
 tweepy
 beautifulsoup4
+youtube_transcript_api
