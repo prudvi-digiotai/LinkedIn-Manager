@@ -1,4 +1,4 @@
-vyzeai
+vyzeai==0.0.20
 pydub
 streamlit
 moviepy
